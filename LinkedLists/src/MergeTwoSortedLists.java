@@ -32,6 +32,6 @@ public class MergeTwoSortedLists {
 			current.next = a;
 		}
 		
-		return head.next;
+		return head.next;	//return the next value of head
 	}	
 }
