@@ -1,5 +1,7 @@
 
 public class CyclicList {
+	
+	//Also known as Floyd's cycle finding algorithm
 	public ListNode detectCycle(ListNode a) {
 	    
 		ListNode fast = a;
