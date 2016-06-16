@@ -44,6 +44,5 @@ public class CyclicShift {
 	    newTail.next = null;
 	    
 	    return newHead;
-	    
 	}
 }
