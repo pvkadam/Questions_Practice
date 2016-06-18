@@ -12,6 +12,7 @@ public class checkParantheses {
 	 * 				If yes, then pop last element
 	 * 			2. Else return false;
 	 * 2. Finally check if list is empty or not
+	 * 
 	 */
 	public int isValid (String a) {
 		HashMap<Character, Character> map = new HashMap<Character, Character>();
