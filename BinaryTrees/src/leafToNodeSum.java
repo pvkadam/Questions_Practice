@@ -27,4 +27,29 @@ public class leafToNodeSum {
 		
 	}
 	
+	
+	//if the binary tree contains binary values 
+	//trick is to define path as 10 * path + next value
+	//if path is 1234. At 123, do 10 * 123 + 4 = 1234
+	//keep dividing by 1003 to avoid overflow everywhere
+	public int sumNumbers(TreeNode a) {
+		
+		return helperSumNumber(a, 0) % 1003;
+	}
+	
+	public int helperSumNumber(TreeNode a, int pathSum) {
+		if (a == null) {
+			return 0;
+		}
+		
+		pathSum = (pathSum*10 + a.val)%1003;
+		
+		if (a.left == null && a.right == null) {
+			return pathSum % 1003;
+		}
+		
+		return (helperSumNumber(a.left, pathSum) + helperSumNumber(a.right, pathSum)) % 1003;
+	}
+	
+	
 }
