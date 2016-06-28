@@ -51,5 +51,4 @@ public class leafToNodeSum {
 		return (helperSumNumber(a.left, pathSum) + helperSumNumber(a.right, pathSum)) % 1003;
 	}
 	
-	
 }
