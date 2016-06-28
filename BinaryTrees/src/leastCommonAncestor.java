@@ -4,7 +4,7 @@ public class leastCommonAncestor {
 	  public int lca(TreeNode a, int val1, int val2) {
 		  
 		  //to test if the values are present
-		  if (val1Present(a, val1) == null || val2Present(a, val2) == null) {
+		  if (valPresent(a, val1) == null || valPresent(a, val2) == null) {
 			  return -1;
 		  }
 		 
@@ -43,7 +43,7 @@ public class leastCommonAncestor {
 //-----------------------------------------------------------------------------------------------------	  
 //JUST TO TEST IF THE VALUES ARE PRESENT
 	  
-	  public TreeNode val1Present(TreeNode a, int val1) {
+	  public TreeNode valPresent(TreeNode a, int val) {
 		  
 		  TreeNode result = null;
 		 
@@ -51,39 +51,16 @@ public class leastCommonAncestor {
 			  return null;
 		  }
 		  
-		  if (a.val == val1) {
+		  if (a.val == val) {
 			  return a;
 		  }
 		  
 		  if (a.left != null) {
-			  result = val1Present(a.left, val1);
+			  result = valPresent(a.left, val);
 		  }
 		  
 		  if (result == null) {
-			  result = val1Present(a.right, val1);
-		  }
-		  
-		  return result;	  
-	  }
-	  
-	  public TreeNode val2Present(TreeNode a, int val2) {
-		  
-		  TreeNode result = null;
-		 
-		  if (a == null) {
-			  return null;
-		  }
-		  
-		  if (a.val == val2) {
-			  return a;
-		  }
-		  
-		  if (a.left != null) {
-			  result = val1Present(a.left, val2);
-		  }
-		  
-		  if (result == null) {
-			  result = val1Present(a.right, val2);
+			  result = valPresent(a.right, val);
 		  }
 		  
 		  return result;	  
