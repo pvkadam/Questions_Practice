@@ -2,27 +2,29 @@
 public class CyclicList {
 	
 	//Also known as Floyd's cycle finding algorithm
-	public ListNode detectCycle(ListNode a) {
-	    
-		ListNode fast = a;
-		ListNode slow = a;
-		
-		while (fast != null & fast.next != null & fast.next.next != null) {
-			slow = slow.next;
-			fast = fast.next.next;
-			
-			if (fast == slow) {		//there is a cycle
-				slow = a;
-				
-				while (fast != slow) {
-					fast = fast.next;
-					slow = slow.next;
-				}
-				return slow;		//cycle starts at slow
-			}
-		}
-		
-		return null;	//no cycle
-	    
-	}
+	   public ListNode detectCycle(ListNode a) {
+	        ListNode fast = a;
+	        ListNode slow = a;
+	        
+	        boolean hasCycle = false;
+	        while(fast != null && fast.next != null && slow != null){
+	            fast = fast.next.next;
+	            slow = slow.next;
+	            if(fast == slow){
+	                hasCycle = true;
+	                break;
+	            }
+	        }
+	        
+	        if(!hasCycle) return null;
+	        
+	        else{
+	            fast = a;
+	            while(fast != slow){
+	                fast = fast.next;
+	                slow = slow.next;
+	            }
+	            return fast;
+	        }
+	   }
 }
