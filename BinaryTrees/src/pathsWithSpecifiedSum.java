@@ -1,7 +1,10 @@
 import java.util.*;
 
+
+
 public class pathsWithSpecifiedSum {
-	  
+
+		//to return all possible root-to-leaf paths
 		public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
 		  
 	        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
@@ -35,4 +38,29 @@ public class pathsWithSpecifiedSum {
 	        temp.remove(temp.size() - 1);		//don't understand this
 	        
 	    }
+	    
+	    
+//---------------------------------------------------------------------------------
+	    //to check if there is a path that exists with equal sum -->return true or false
+	    public boolean helperHasPathSum(TreeNode tree, int sum) {
+	    	if (tree == null) {
+	    		return false;
+	    	}
+	    	
+	    	if (tree.left == null && tree.right == null) {
+	    		if (tree.val == sum) {
+	    			return true;
+	    		}
+	    	}
+	    	
+	    	return helperHasPathSum(tree.left, sum - tree.val) || helperHasPathSum(tree.right, sum - tree.val);
+	    }
+	    
+		public int hasPathSum(TreeNode a, int b) {
+			if (helperHasPathSum(a, b)) {
+				return 1;
+			}
+			
+			return 0;
+		}
 }
