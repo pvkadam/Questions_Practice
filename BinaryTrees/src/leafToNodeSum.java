@@ -1,6 +1,4 @@
-/*
- * 
- */
+
 public class leafToNodeSum {
 	
 	//if the binary tree contains binary values 
