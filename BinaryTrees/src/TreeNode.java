@@ -1,4 +1,6 @@
-
+/*
+ * Default TreeNode type
+ */
 public class TreeNode {
 	  
 	  int val;
