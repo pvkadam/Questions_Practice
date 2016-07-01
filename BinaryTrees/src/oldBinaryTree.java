@@ -1,4 +1,4 @@
-
+//previous implementation
 public class oldBinaryTree {
 	static oldNode current;
 	static oldNode root;
