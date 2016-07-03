@@ -25,7 +25,7 @@ public class constructTreeFromPreOrderAndInorder {
 	            break;
 	        }
 	    }
-	    //IMPORTANT TO UNDERSTAND THIS
+	    //IMPORTANT TO UNDERSTAND THIS PART
 	    p.left = construct(preorder, preStart+1, preStart+(k-inStart), inorder, inStart, k-1);
 	    p.right= construct(preorder, preStart+(k-inStart)+1, preEnd, inorder, k+1 , inEnd);
 	 
