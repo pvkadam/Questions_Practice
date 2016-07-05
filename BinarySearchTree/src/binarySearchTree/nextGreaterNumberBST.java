@@ -24,7 +24,7 @@ public class nextGreaterNumberBST {
 	            a = a.left;
 	        }
 	        
-	        else {
+	        else {		//this is for both less than AND equal to! 
 	            a = a.right;
 	        }
 	    }
