@@ -10,7 +10,7 @@ so the function should return 3.
 
 
  */
-public class numberOfOnes {
+public class numberOfOnesBits {
 	public int numSetBits(long a) {
 	    int zeroes = 0;
 	    
