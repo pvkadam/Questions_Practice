@@ -22,4 +22,5 @@ public class singleNumber {
 	    
 	    return xor;
 	}
+	
 }
