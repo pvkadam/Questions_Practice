@@ -1,5 +1,6 @@
 package binarySearchTree;
-import java.util.*;
+
+import java.util.ArrayList;
 
 /*
  * Input: inorder[] = {5, 10, 40, 30, 28}
@@ -20,9 +21,11 @@ Output: root of following tree
      5          28
     /          /  \
    1         15    20
+   
+   ALSO KNOWN AS CARTESIAN TREE** - in some references
  */
 
-public class inorderTraversalToCartesianTree {
+public class inorderTraversalToBST {
 	public TreeNode buildTree(ArrayList<Integer> a) {
 		
 		if (a.size() == 0) {
@@ -61,3 +64,4 @@ public class inorderTraversalToCartesianTree {
 		
 	}
 }
+
