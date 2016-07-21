@@ -12,24 +12,33 @@ Return 1 ( corresponding to true ) because "myinterviewtrainer" can be segmented
 as "my interview trainer".
  */
 public class wordBreak {
-    public static boolean wordbreak(String s, ArrayList<String> dictionary){
-        boolean[] t = new boolean[s.length() + 1];
-        t[0] = true;
-        
-        for(int i = 0; i < s.length(); i++){
-            if(!t[i])
-                continue;
-            for(String word : dictionary){
-                int length = word.length();
-                int end = i + length;
-                if(end > s.length())
-                    continue;
-                if(t[end])
-                    continue;
-                if(s.substring(i, end).equals(word))
-                    t[end] = true;
-            }
-        }
-        return t[s.length()];
-    }
+	   public ArrayList<String> wordBreak(String s, ArrayList<String> dict) {
+	        // Note: The Solution object is instantiated only once and is reused by each test case.
+	        Map<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
+	        return wordBreakHelper(s,dict,map);
+	    }
+
+	    public ArrayList<String> wordBreakHelper(String s, ArrayList<String> dict, Map<String, ArrayList<String>> memo){
+	        if(memo.containsKey(s)) return memo.get(s);
+	        ArrayList<String> result = new ArrayList<String>();
+	        int n = s.length();
+	        if(n <= 0) return result;
+	        for(int len = 1; len <= n; ++len){
+	            String subfix = s.substring(0,len);
+	            if(dict.contains(subfix)){
+	                if(len == n){
+	                    result.add(subfix);
+	                }else{
+	                    String prefix = s.substring(len);
+	                    ArrayList<String> tmp = wordBreakHelper(prefix, dict, memo);
+	                    for(String item:tmp){
+	                        item = subfix + " " + item;
+	                        result.add(item);
+	                    }
+	                }
+	            }
+	        }
+	        memo.put(s, result);
+	        return result;
+	    }
 }
