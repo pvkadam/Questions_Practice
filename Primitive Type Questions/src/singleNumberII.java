@@ -9,6 +9,8 @@ Note: Your algorithm should have a linear runtime complexity.
 Could you implement it without using extra memory?
 
 Example :
+Input : [1, 2, 4, 3, 3, 2, 2, 3, 1, 1]
+Output : 4
 
  */
 public class singleNumberII {
