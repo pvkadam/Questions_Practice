@@ -29,4 +29,22 @@ public class singleNumberII {
 	 return ones;
 	 
 	}
+	
+	public static long reverse(long a) {
+        long result = 0;
+        int i = 3;
+        while(a > 0){
+        	
+            result += (a % 2) * Math.pow(2, i);
+            System.out.println(result);
+            i--;                        
+            a = a/2;
+        }
+        System.out.println("final result is " + result);
+        return result;
+    }
+	
+	public static void main (String[] args) {
+		reverse(12);
+	}
 }
