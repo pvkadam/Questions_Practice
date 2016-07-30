@@ -23,19 +23,16 @@ public class reverseBits {
 	
 
 	//another method
-    public static long reverse(long A) {
-	    long rev = 0;
-	    
-	    for (int i = 0; i < 32; i++) {
-	        rev <<= 1;
-	        if ((A & (1 << i)) != 0) {
-	        	rev |= 1;
-	        }     
+	   public static long reverse(long a) {
+	        long result = 0;
+	        int i = 31;
+	        while(a > 0){
+	            result += (a % 2) * Math.pow(2, i);
+	            i--;                        
+	            a = a/2;
+	        }
+	        return result;
 	    }
-	    System.out.println(rev);
-	    return rev;
-	    
-	}
     
     //swap method
 	public static long swapBits(long x, int i, int j) {
