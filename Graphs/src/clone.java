@@ -29,7 +29,23 @@ public class clone {
         return clone;
     }
     
-    public static void main (String[] args) {
-    	System.out.println(~6);
-    }
+	public static long swapBits(long x, int i, int j) {
+		
+		if (((x >>> i) & 1) != ((x >>> j) & 1)) {	//shift x by i and j and AND with 1 to see if they are equal
+			//flip bits using XOR and bitmask
+			//XOR with 1 
+			long bitMask = (1 << i) | (1 << j);	
+			//System.out.println(bitMask);
+			x ^= bitMask;	// 110 with bitmask of 1 at (0, 1)  -> 101
+			//1010 with bitmask of 1 at (2,3) -->   0110
+			//1010 with bitmask of 1 at (1,2) -->   1100 
+		}
+		System.out.println(x);
+		return x; 
+	}
+	
+	public static void main (String[] args) {
+		swapBits(10, 1, 2);
+		
+	}
 }
