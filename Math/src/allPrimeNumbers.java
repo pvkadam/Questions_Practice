@@ -9,30 +9,41 @@ all primes till 7 = {2, 3, 5, 7}
 
 Make sure the returned array is sorted.
  */
+
+import java.util.*;
+
 public class allPrimeNumbers {
-	public int countPrimes(int n) {
-		if (n <= 2)
-			return 0;
-	 
-		// init an array to track prime numbers
-		boolean[] primes = new boolean[n];
-		for (int i = 2; i < n; i++)
-			primes[i] = true;
-	 
-		for (int i = 2; i <= Math.sqrt(n - 1); i++) {
-		// or for (int i = 2; i <= n-1; i++) {
-			if (primes[i]) {
-				for (int j = i + i; j < n; j += i)
-					primes[j] = false;
-			}
-		}
-	 
-		int count = 0;
-		for (int i = 2; i < n; i++) {
-			if (primes[i])
-				count++;
-		}
-	 
-		return count;
+	public ArrayList<Integer> sieve(int a) {
+	    
+	    
+        int[] array = new int[a+1];
+	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    
+	    if (a == 0 || a == 1) {
+	        return null;
+	    }
+	    
+	    for (int i = 0; i <=a; i++) {
+	        array[i] = 1;
+	    }
+	    
+	    array[0] = 0;
+	    array[1] = 0;
+	    
+	    for (int i = 2; i <= a; i++) {
+	        if (array[i] == 1) {
+	            for (int j = 2; i*j <=a; j++) {
+	                array[i*j] = 0;
+	            }
+	        }
+	    }
+
+	    for (int i = 2; i < array.length; i++) {
+	        if (array[i] == 1){
+	            result.add(i);
+	        }
+	    }
+	    
+        return result;
 	}
 }
