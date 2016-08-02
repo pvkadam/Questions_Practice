@@ -26,6 +26,7 @@ public class primeSum {
             if (isPrime(i) && isPrime(A - i)) {
                 arr.add(i);
                 arr.add(A - i);
+                return arr;
             }
         }
         
@@ -43,7 +44,7 @@ public class primeSum {
     
     
     public static void main (String[] args) {
-    	primesum(19);
+    	primesum(18);
     }
     
 }
