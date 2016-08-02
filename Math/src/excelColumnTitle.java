@@ -12,19 +12,15 @@ For example:
     28 -> AB 
  */
 public class excelColumnTitle {
-	public String convertToTitle(int a) {
+	public String convertToTitle(int n) {
 		 
-	    StringBuilder sb = new StringBuilder();
-	    
-	    while (a > 0) {
-	        a--;
-	        char ch = (char) (a%26 + 'A');
-	        a = a/26;
-	        sb.append(ch);
-	    }
-	    
-	    sb.reverse();
-	    return sb.toString();
-	    
+    	String ans = "";
+       
+        while (n > 0) {
+            ans = (char) ((n - 1) % 26 + 'A') + ans;
+            n = (n - 1) / 26;
+        }
+        
+        return ans;
 	}
 }
