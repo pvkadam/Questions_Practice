@@ -20,42 +20,30 @@ If a < c OR a==c AND b < d.
  */
 import java.util.*;
 public class primeSum {
-	   public ArrayList<Integer> primesum(int a) {
-	        
-	        ArrayList<Integer> result = new ArrayList<Integer>();
-	        
-	        if (a == 4) {
-	            result.add(2);
-	            result.add(2);
-	        }
-	        
-	        if (a%2 == 0) {
-	            if (a > 2 ) {
-	                for (int i = 3; i < a/2; i++) {
-	                    if (isPrime(i) && isPrime(a-i)) {
-	                        result.add(i);
-	                        result.add(a-i);
-	                        break;
-	                    }
-	                }
-	            }
-	        }
-	        
-	        return result;
-	    }
-	    
-	    
-	    public boolean isPrime(int x) {
-	        
-	        if (x < 2){
-	            return false;
-	        }
-	        for (int i = 2; i <= Math.sqrt(x); i++) {
-	            if ((x%i) == 0) {
-	                return false; 
-	            }
-	        }
-	        
-	        return true;
-	    }
+    public static ArrayList<Integer> primesum(int A) {
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        for (int i = 2; i < A; i++) {
+            if (isPrime(i) && isPrime(A - i)) {
+                arr.add(i);
+                arr.add(A - i);
+            }
+        }
+        
+        return arr;
+    }
+
+    public static boolean isPrime(int number) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    
+    public static void main (String[] args) {
+    	primesum(19);
+    }
+    
 }
