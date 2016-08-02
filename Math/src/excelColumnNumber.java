@@ -18,17 +18,14 @@ Example:
     AB -> 28 
  */
 public class excelColumnNumber {
-	public int titleToNumber(String a) {
+	public int titleToNumber(String s) {
 	    
-	    int result = 0;
-	    int toThePower = 0;
-	    
-	    for (int i = a.length() - 1; i >= 0; i--) {
-	        result = result + (int)(Math.pow(26, toThePower)) * ((int)(a.charAt(i)) - 64);
-	        toThePower++;
-	        
-	    }
-	    
-	    return result;
-	}
+		   int result = 0;
+		   
+	       for (int i = 0; i < s.length(); i++) {
+	               result = result * 26 + (s.charAt(i) - 'A' + 1);
+	       }
+	       
+	       return result;
+		}
 }
