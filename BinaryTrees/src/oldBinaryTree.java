@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+//previous implementation
+>>>>>>> upstream/master
 public class oldBinaryTree {
 	static oldNode current;
 	static oldNode root;
