@@ -12,16 +12,32 @@ For this problem, return the maximum sum.
 
 import java.util.*;
 public class maxSumContinguousArray {
-	public int maxSubArray(final List<Integer> a) {
+	public static int maxSubArray(final ArrayList<Integer> a) {
 	    
-       int sum = a.get(0);
-       int maxSum = a.get(0);
+       int sumEndingHere = a.get(0);
+       int maxSumSoFar = a.get(0);
        
        for (int i = 1; i < a.size(); i++) {
-    	   sum = Math.max(sum + a.get(i), a.get(i));
-    	   maxSum = Math.max(sum, maxSum);
+    	   sumEndingHere = Math.max(sumEndingHere + a.get(i), a.get(i));
+    	   maxSumSoFar = Math.max(sumEndingHere, maxSumSoFar);
+
+    	   
        }
-	    
-	   return maxSum;
+
+	   return maxSumSoFar;
+	}
+	
+	public static void main (String[] args) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(-2);
+		list.add(1);
+		list.add(-3);
+		list.add(4);
+		list.add(-1);
+		list.add(2);
+		list.add(1);
+		list.add(-5);
+		list.add(4);
+		maxSubArray(list);
 	}
 }
