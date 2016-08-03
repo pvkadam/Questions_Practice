@@ -14,38 +14,14 @@ import java.util.*;
 public class maxSumContinguousArray {
 	public int maxSubArray(final List<Integer> a) {
 	    
-        int sum = a.get(0);     //-2
-        int maxSum = a.get(0); 
-        
-        if (a.size() == 0) {
-            return 0;
-        }
-        
-        else if (a.size() == 1) {
-            return a.get(0);
-        }
-        
-        for (int i = 1; i < a.size(); i++) {
-            
-            sum = sum + a.get(i);       //-1    //-2    //2     //3     //5
-                
-            if (a.get(i) > sum) {
-                sum = a.get(i);         //1
-                
-                if (sum >= maxSum) {
-                    maxSum = sum;       //1     //4
-                }
-            }
-            
-            else  {
-                if (sum >= maxSum) {
-                    maxSum = sum;       //5
-                }
-            }
-        }
-        
-        return maxSum;
+       int sum = a.get(0);
+       int maxSum = a.get(0);
+       
+       for (int i = 1; i < a.size(); i++) {
+    	   sum = Math.max(sum + a.get(i), a.get(i));
+    	   maxSum = Math.max(sum, maxSum);
+       }
 	    
-	    
+	   return maxSum;
 	}
 }
