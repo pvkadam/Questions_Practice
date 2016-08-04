@@ -11,31 +11,22 @@ Another possible answer : [4, 1, 3, 2]
  */
 import java.util.*;
 public class waveArray {
-	public ArrayList<Integer> wave(ArrayList<Integer> a) {
+	public ArrayList<Integer> wave(ArrayList<Integer> A) {
 	    
-	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    Collections.sort(A);
+	    int n = A.size();
 	    
-	    Collections.sort(a);
-	    
-	    if (a.size() == 0) {
-	        return result;
+	    for (int i = 0; i < n - 1; i += 2) {
+	        exch(A, i, i + 1);
 	    }
 	    
-	    else if (a.size()%2 == 0) {
-    	    for (int i = 0; i < a.size(); i+=2) {
-    	        result.add(a.get(i+1));
-    	        result.add(a.get(i));
-    	    }	        
-	    }
+	    return A;
 	    
-	    else {
-	        for (int i = 0; i < a.size() -1; i +=2) {
-	            result.add(a.get(i+1));
-    	        result.add(a.get(i));
-	        }
-	        result.add(a.get(a.size() - 1));
-	    }
-
-        return result;
+	}
+	
+	private void exch(ArrayList<Integer> A, int i, int j) {
+	    int temp = A.get(i);
+	    A.set(i, A.get(j));
+	    A.set(j, temp);
 	}
 }
