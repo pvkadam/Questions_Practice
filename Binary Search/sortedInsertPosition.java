@@ -17,9 +17,9 @@ public class sortedInsertPosition {
 	    
         int n = A.size();
         int start = 0, end = n - 1;
-        int mid;
+        
         while(start <= end){
-            mid = (start + end) / 2;
+            int mid = (start + end) / 2;
             if(target == A.get(mid)){
                 return mid;
             }
