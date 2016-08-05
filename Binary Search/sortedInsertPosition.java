@@ -13,36 +13,24 @@ Here are few examples.
  */
 import java.util.*;
 public class sortedInsertPosition {
-	public int searchInsert(ArrayList<Integer> a, int b) {
+	public int searchInsert(ArrayList<Integer> A, int target) {
 	    
-	    int start = 0;
-	    int end = a.size() - 1;
-	    int mid = 0;
-	    
-	    while (start <= end) {
-	        mid = (start + end)/2;
-	        if (a.get(mid) == b) {
-	            return mid;
-	        }
-	        
-	        else if (a.get(mid) > b) {
-	            end = mid - 1;
-	        }
-	        
-	        else if (a.get(mid) < b) {
-	            start = mid + 1;
-	        }
-	    }
-	    
-	    if (a.get(mid) > b) {
-	        return mid;
-	    }
-	    
-	    else if (a.get(mid) < b) {
-	        return mid + 1;
-	    }
-	    
-	    return mid;
-	    
+        int n = A.size();
+        int start = 0, end = n - 1;
+        int mid;
+        while(start <= end){
+            mid = (start + end) / 2;
+            if(target == A.get(mid)){
+                return mid;
+            }
+            else if(target < A.get(mid)){
+                end = mid - 1;
+            }
+            else{
+                start = mid + 1;
+            }
+        }
+        return start;
+    
 	}
 }
