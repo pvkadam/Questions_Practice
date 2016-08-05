@@ -1,5 +1,5 @@
 public class ATOI {
-	public int atoi(final String a) {
+	public static int atoi(final String a) {
 	    
 	    if (a.length() == 0) {
 	        return 0;
@@ -45,5 +45,9 @@ public class ATOI {
 	    
 	    return (int) result;
 	    
+	}
+	
+	public static void main (String[] args) {
+		System.out.println(atoi("945"));
 	}
 }

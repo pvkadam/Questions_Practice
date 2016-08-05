@@ -1,7 +1,7 @@
 import java.util.*;
 public class IntegerToRoman {
 	
-	public String intToRoman(int a) {
+	public static String intToRoman(int a) {
 		
 		TreeMap <Integer, String> map = new TreeMap <Integer, String>();
 		
@@ -29,6 +29,9 @@ public class IntegerToRoman {
 		
 	}
 	
+	public static void main (String[] args) {
+		System.out.println(intToRoman(7));
+	}
 	
 
 }
