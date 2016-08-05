@@ -15,8 +15,7 @@ import java.util.*;
 public class sortedInsertPosition {
 	public int searchInsert(ArrayList<Integer> A, int target) {
 	    
-        int n = A.size();
-        int start = 0, end = n - 1;
+        int start = 0, end = A.size() - 1;
         
         while(start <= end){
             int mid = (start + end) / 2;

@@ -23,17 +23,17 @@ public class squareRootOfInteger {
         while(start <= end) {
             int mid = (start + end) / 2;
             
-            if(mid == a/mid) {
+            if(mid*mid == a) {
                 return mid;
             }
             
-            if(mid < a/mid) {
-                start = mid + 1;
-                floor = mid;
+            if(mid > a/mid) {
+                end = mid - 1;
             } 
             
             else {
-                end = mid - 1;
+                start = mid + 1;
+                floor = mid;
             }
         }
 
