@@ -11,7 +11,7 @@ Input : 11
 Output : 3
  */
 public class squareRootOfInteger {
-    public int sqrt(int a) {
+    public static int sqrt(int a) {
         
         if(a == 0 || a == 1) {
             return a;
@@ -22,21 +22,30 @@ public class squareRootOfInteger {
         
         while(start <= end) {
             int mid = (start + end) / 2;
+            System.out.println("mid is " + mid);
             
             if(mid*mid == a) {
-                return mid;
+          
+            	return mid;
             }
             
             if(mid > a/mid) {
                 end = mid - 1;
             } 
-            
+             
             else {
                 start = mid + 1;
                 floor = mid;
+                System.out.println(floor);
             }
+            System.out.println("----------");
         }
 
+        System.out.println("final answer " + floor);
         return floor;
+    }
+    
+    public static void main (String[] args) {
+    	sqrt(27);
     }
 }

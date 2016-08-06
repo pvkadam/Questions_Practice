@@ -18,20 +18,31 @@ public class rotatedSortedArraySearch {
         int right= a.size()-1;
      
         while(left<=right){
+        	
             int mid = left + (right-left)/2;
+            
             if(b==a.get(mid))
                 return mid;
      
-            if(a.get(left) <= a.get(mid)){
-                if(a.get(left) <=b && b < a.get(mid)){
+            if(a.get(left) <= a.get(mid)) {
+                
+            	if(a.get(left) <=b && b < a.get(mid)) {
                     right=mid-1;
-                }else{
+                }
+                
+                else {
                     left=mid+1;
                 }
-            }else{
-                if(a.get(mid) < b && b <= a.get(right)){
+            	
+            }
+            
+            else {
+            	
+                if(a.get(mid) < b && b <= a.get(right)) {
                     left = mid+1;
-                }else{
+                }
+                
+                else {
                     right = mid-1;
                 }
             }    
