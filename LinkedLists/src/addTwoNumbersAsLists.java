@@ -16,30 +16,34 @@ public class addTwoNumbersAsLists {
 		 */
 		
 		int carry = 0;
+		ListNode dummyHead = new ListNode(0);
+		ListNode iteration = dummyHead;
 		
-		ListNode newHead = new ListNode(0);
-		ListNode p1 = a, p2 = b, p3 = newHead;
-		
-		while (p1 != null || p2 != null) {
-			if (p1 != null) {
-				carry += p1.val;
-				p1 = p1.next;
-			}
-			
-			if (p2 != null) {
-				carry += p2.val;
-				p2 = p2.next;
-			}
-			
-			p3.next = new ListNode(carry%10);
-			p3 = p3.next;
-			carry /= 10;
+		while (a != null || b != null) {
+		    int sum = carry;
+		    
+		    if (a != null) {
+		        sum += a.val;
+		        a = a.next;
+		    }
+		    
+		    if (b != null) {
+		        sum += b.val;
+		        b = b.next;
+		    }
+		    
+		    iteration.next = new ListNode(sum % 10);
+		    carry = sum / 10;
+            iteration = iteration.next;
+            
 		}
 		
-		if (carry == 1) 
-			p3.next = new ListNode(1);
+		//for the last MSB
+		if (carry == 1) {
+		    iteration.next = new ListNode(carry); 
+		}
 		
-		return newHead.next;
+		return dummyHead.next;
 		
 	}
 }
