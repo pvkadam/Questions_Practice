@@ -28,8 +28,16 @@ public class CyclicShift {
 	    int shiftHead = length - b;	//shift new head to this length - b position
 	    
 	    //given that tail is at the end node, connect it to head again by removing null
-	    tail.next = a;	//5 connected to 1
+	    tail.next = a;	//5 connected to 1 **TO MAKE A CYCLIC LIST
 	    
+	    /*
+	     * 1 -> 2 -> 3 -> 4 -> 5 -
+	     * ^
+	     * |					 |
+	     * <-	-	<-	-	<-  <-
+	     */
+	   
+	  
 	    ListNode newTail = tail;	//new tail is at 5
 	    
 	    for (int i = 0; i < shiftHead; i++) {

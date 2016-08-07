@@ -12,13 +12,11 @@ public class removeNthLastNode {
 		ListNode fast = a;
 		ListNode slow = a;
 		
-		while (b > 0) { //shift fast by b nodes
-		    if (fast.next == null) {	//check if 1st element is 0
+		for (int i = 0; i < b; i++) { //shift fast by b nodes
+		    if (fast.next == null) {
 		        return a.next;
 		    }
-		    
 			fast = fast.next;
-			b--;
 		}
 		
 		while (fast.next != null) {		//to make fast reach last and slow point to N+1th element
