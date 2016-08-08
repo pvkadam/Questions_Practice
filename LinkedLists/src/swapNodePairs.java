@@ -4,22 +4,21 @@ public class swapNodePairs {
 	    if(head == null || head.next == null)   
 	        return head;
 	 
-	    ListNode h = new ListNode(0);
-	    h.next = head;
-	    ListNode p = h;
-	 
-	    while(p.next != null && p.next.next != null){
-	        //use t1 to track first node
-	        ListNode t1 = p;
-	        p = p.next;
-	        t1.next = p.next;
-	 
-	        //use t2 to track next node of the pair
-	        ListNode t2 = p.next.next;
-	        p.next.next = p;
-	        p.next = t2;
-	    }
-	 
-	    return h.next;
+	    ListNode start = new ListNode(0);
+	    start.next = head;
+	    
+	    ListNode current = start;
+	    while (current.next != null && current.next.next != null) {
+	    	current.next = swap (current.next, current.next.next);
+	    	current = current.next.next;
+	    }	    
+	    return start.next;
+
+	}
+	
+	public ListNode swap(ListNode node1, ListNode node2) {
+		node1.next = node2.next;
+		node2.next = node1;
+		return node2;
 	}
 }
