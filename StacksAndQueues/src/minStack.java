@@ -2,9 +2,9 @@ import java.util.*;
 
 public class minStack {
 	
-	private Stack<Integer> stack = new Stack<Integer>();
+	Stack<Integer> stack = new Stack<Integer>();
 	
-	private int min = -1;
+	int min = -1;
 		
 	
 	//keep adding elements to the stack
@@ -37,4 +37,5 @@ public class minStack {
     public int getMin() {
         return min;
     }
+    
 }
