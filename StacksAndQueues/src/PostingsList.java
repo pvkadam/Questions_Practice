@@ -17,7 +17,7 @@ public class PostingsList {
 		while (!stack.isEmpty()) {
 			postingListNode current = stack.pop();
 			
-			while (current != null && current.order == -1) {
+			if (current != null && current.order == -1) {
 				current.order = order++;
 				stack.push(current.nextNode);
 				stack.push(current.jumpNode);
