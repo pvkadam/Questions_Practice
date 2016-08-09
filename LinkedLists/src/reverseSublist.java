@@ -13,21 +13,27 @@ public class reverseSublist {
 		
 		ListNode head = new ListNode(0);
 		head.next = a;
-		ListNode subListHead = head;
+		ListNode current = head;
 		
 		for (int i = 1; i < m; i++) {
-		    subListHead = subListHead.next;	// at 1
+			current = current.next;	// at 1
 		}
 		//reached the starting point of m-1
 		
 		//now reach m
-		ListNode subListIteration = subListHead.next;	//at 2
-		
+		ListNode iteration = current.next;	//at 2
+		System.out.println("iteration  " + iteration.val);
+		System.out.println("------------");
 		for (int i = m; i < n; i++) {
-			ListNode temp = subListIteration.next;
-			subListIteration.next = temp.next;
-			temp.next = subListHead.next;
-			subListHead.next = temp;
+			ListNode Next = iteration.next;
+			System.out.println("Next " + Next.val);
+			iteration.next = Next.next;
+			System.out.println("iteration.next " + iteration.next.val);
+			Next.next = current.next;
+			System.out.println("Next.next " + Next.next.val);
+			current.next = Next;
+			System.out.println("current.next " + current.next.val);
+			System.out.println("------------");
 		}
 		
 		return head.next;
@@ -67,10 +73,12 @@ public class reverseSublist {
 		list.add(3);
 		list.add(4);
 		list.add(5);
+		list.add(6);
 		
 //		System.out.println("before: ");
 //		list.print();
-		list.reverseBetween(head, 2, 4);
+		list.reverseBetween(head, 2, 5);
+		list.print();
 //		System.out.println();
 //		System.out.println("after: ");
 //		list.print();
