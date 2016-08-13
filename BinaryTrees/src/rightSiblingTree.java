@@ -6,7 +6,7 @@
 public class rightSiblingTree {
 	public void siblingTree(TreeNode tree) {
 		TreeNode leftStart = tree;
-		while (leftStart.left != null && leftStart.left != null) {
+		while (leftStart != null && leftStart.left != null) {
 			generateSiblingTree(leftStart);
 			leftStart = leftStart.left;
 		}
@@ -17,11 +17,13 @@ public class rightSiblingTree {
 		TreeNode iteration = node;
 		while (iteration != null) {
 			iteration.left.next = iteration.right;
+			
+			if (iteration.next != null) {
+				iteration.right.next = iteration.next.left;
+			}
+			
+			iteration = iteration.next;
 		}
 		
-		if (iteration.next != null) {
-			iteration.right.next = iteration.next.left;
-		}
-		iteration = iteration.next;
 	}
 }

@@ -46,5 +46,6 @@ public class heightBalancedTree {
 		
 		int maxDepth = Math.max(subDepth(node.left), subDepth(node.right)) + 1;
 		return maxDepth;
+		
 	}
 }
