@@ -1,6 +1,6 @@
 //take perfect binary tree and set each node's level-next field to the node on its right
 /*
- * 2 cases: see figure 10.6. Check for A and set I as net of B. 
+ * 2 cases: see figure 10.6. Check for A and set I as next of B. 
  * Check for B and I, set J as next of F. 
  */
 public class rightSiblingTree {
