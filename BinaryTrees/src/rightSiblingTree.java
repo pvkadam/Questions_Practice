@@ -24,6 +24,5 @@ public class rightSiblingTree {
 			
 			iteration = iteration.next;
 		}
-		
 	}
 }
