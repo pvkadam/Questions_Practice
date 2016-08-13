@@ -5,6 +5,6 @@ public class maxDepthBinaryTree {
 			return 0;
 		}
 		
-		return 1 + Math.min(maxDepth(a.left), maxDepth(a.right));
+		return 1 + Math.max(maxDepth(a.left), maxDepth(a.right));
 	}
 }
