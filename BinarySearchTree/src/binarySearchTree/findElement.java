@@ -2,11 +2,11 @@ package binarySearchTree;
 
 public class findElement {
 	public TreeNode findKey(TreeNode tree, int x) {
-		if (x == tree.val) {
+		if (tree == null || x == tree.val) {
 			return tree;
 		}
 		
-		return x > tree.val ? tree.right: tree.left;
+		return x > tree.val ? findKey(tree.right, x): findKey(tree.left, x);
 		
 	}
 }
