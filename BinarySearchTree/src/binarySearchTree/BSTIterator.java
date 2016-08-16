@@ -1,18 +1,18 @@
 package binarySearchTree;
 import java.util.*;
 public class BSTIterator {
-    Stack<TreeNode> stack;
-    public void TreeIterator(TreeNode root) {
-       
-    	stack = new Stack<TreeNode>();
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    
+    //constructor
+    public BSTIterator(TreeNode root) {
         
         while(root != null) {
             stack.push(root);
             root = root.left;
         }
     }
-    
-    /** @return whether we have a next smallest number */
+
+   /** @return whether we have a next smallest number */
     public boolean hasNext() {
         return !stack.isEmpty();
     }
