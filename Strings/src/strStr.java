@@ -35,27 +35,15 @@ public class strStr {
         int N = haystack.length();
         
         for(i = 0, j = 0; i < N && j < M; i++){
-        	System.out.println("haystack " + haystack.charAt(i) + " needle " + needle.charAt(j));
-
-            if(haystack.charAt(i) == needle.charAt(j)) {
-
+            if(haystack.charAt(i) == needle.charAt(j)) 
                 j++;
-                System.out.println(" equal i " + i);
-            	System.out.println(" equal j " + j);
-            }
-            else {
+            else{
                 i = i - j;
                 j = 0;
-                
-                System.out.println("i " + i);
-                System.out.println("j " + j);
             }
-            
-            System.out.println("---------");
         }
         
-        System.out.println("i " + i);
-        System.out.println("M " + M);
+        
         if(j == M)
             return i - M;
         else

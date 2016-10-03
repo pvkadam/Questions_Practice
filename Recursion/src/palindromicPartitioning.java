@@ -52,7 +52,6 @@ public class palindromicPartitioning {
 	public static void main (String[] args) {
 //		palindromicPartitioning class1 = new palindromicPartitioning();
 //		class1.partition("1331");
-		System.out.println(1<<1);
-		
+			
 	}
 }
