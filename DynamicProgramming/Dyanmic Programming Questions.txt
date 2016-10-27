@@ -1,4 +1,15 @@
 Dyanmic Programming Questions
 
-1. Find the maximum sum in subarray (maximum sum continguous array). 
-2. Count the number of score combinations (American football game). 
+1. Find the maximum sum in subarray (maximum sum continguous array) - EPI and Github
+2. Count the number of score combinations (American football game) - EPI 
+3. Calculate Levenshtein algorithm to find the minimum number of edits between two strings - EPI and Github
+4. Count the number of ways to traverse a 2D array (same as calculate unique paths without obstacles) - EPI and Github
+5. Compute binomial coefficients - EPI
+6. Search for a sequence in a 2D array (given a 1D array) - EPI
+7. Knapsack problem (weight and value) - EPI
+8. BEDBATHANDBEYOND problem (given a dictionary, check whether a name is a concatenation of sequence of dictionary words) - EPI 
+9. Find the minimum weight path in a triangle - EPI
+10. Pick up coins for maximum gain (even number of coins in a line) - EPI
+11. Count number of moves to climb up stairs - EPI and Github
+12. The pretty printing problem (calculate the minimum messiness required) - EPI
+13. 
