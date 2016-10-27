@@ -77,7 +77,7 @@ public class reverseSublist {
 		
 //		System.out.println("before: ");
 //		list.print();
-		list.reverseBetween(head, 2, 5);
+		list.reverseBetween(head, 2, 4);
 		list.print();
 //		System.out.println();
 //		System.out.println("after: ");

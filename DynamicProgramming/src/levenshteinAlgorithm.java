@@ -2,6 +2,9 @@
 /*
  * https://www.youtube.com/watch?v=We3YDTzNXEk
  */
+
+//Find the minimum number of edits needed to transform the first string into the second string
+
 public class levenshteinAlgorithm {
 	public int minDistance(String a, String b) {
 		
