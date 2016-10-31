@@ -12,4 +12,20 @@ Dyanmic Programming Questions
 10. Pick up coins for maximum gain (even number of coins in a line) - EPI
 11. Count number of moves to climb up stairs - EPI and Github
 12. The pretty printing problem (calculate the minimum messiness required) - EPI
-13. 
+13. Find the longest increasing subsequence (takes an array and returns the length of longest nondecreasing subsequence) - EPI and Github
+14. Buy and sell a stock once, twice and n times - Github
+15. Ways to decode: given a message, determine the number of ways it could be encoded: Github
+16. Interleaving strings: given three strings, find whether s3 is formed by interleaving s1 and s2 - Github
+17. Calculate the longest valid paranthesis - Github
+18. Find maximum rectangle area in a binary matrix - Github
+19. Find maximum sum without adjacent elements - Github
+20. Find the maximum product sum array - Github
+21. Find the minimum number of jumps to reach the last index (with given jumps at each index) - Github
+22. Perform regular expression matching - Github
+23. Find if two strings are scrambled or not (binary tree) - Github 
+24. Given a binary tree, calculate how many unique binary search trees (BST) can be possible? - Github
+25. Calculate total number of unique paths with obstacles - Github
+26. Word break: Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words - Github
+27. Word break: Given a string s and a dictionary of words dict, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences - Github
+
+
