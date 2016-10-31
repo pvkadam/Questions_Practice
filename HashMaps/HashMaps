@@ -1,0 +1,12 @@
+HashMaps
+
+1. For a given array of strings, compute all the anagrams - Github
+2. Return a deep copy of linked list - Github
+3. Given an array and int k, find if there are 2 indices such that x - y = k - Github
+4. Given an array, find 4 elements such that their sum is equal to target value - Github
+5. Find the longest substring which is distinct and not repeating letters - Github
+6. Given n points on a 2D plane, find maximum number of points that lie on the straight line - Github
+7. Given a string S and list of words L, find starting indices of S that is concatenation of each word in L exactly once - Github
+8. Given an array A of integers, find the index of values that satisfy A + B = C + D, where A,B,C & D are integers values in the array - Github
+9. Perform valid check of sudoku - Github
+10. Given a string S and a string T, find the minimum window in S which will contain all the characters in T in linear time complexity. Note that when the count of a character C in T is N, then the count of C in minimum window in S should be at least N.
