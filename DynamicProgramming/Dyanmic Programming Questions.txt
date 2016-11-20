@@ -19,7 +19,7 @@ Dyanmic Programming Questions
 17. Calculate the longest valid paranthesis - Github
 18. Find maximum rectangle area in a binary matrix - Github
 19. Find maximum sum without adjacent elements - Github
-20. Find the maximum product sum array - Github
+20. Find the maximum product sub array - Github
 21. Find the minimum number of jumps to reach the last index (with given jumps at each index) - Github
 22. Perform regular expression matching - Github
 23. Find if two strings are scrambled or not (binary tree) - Github 
