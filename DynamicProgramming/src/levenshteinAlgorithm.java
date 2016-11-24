@@ -6,7 +6,7 @@
 //Find the minimum number of edits needed to transform the first string into the second string
 
 public class levenshteinAlgorithm {
-	public int minDistance(String a, String b) {
+	public static int minDistance(String a, String b) {
 		
 		int DP[][] = new int[a.length() + 1][b.length() + 1];
 		
@@ -43,7 +43,19 @@ public class levenshteinAlgorithm {
 			}
 		}
 		
+		for (int i = 0; i < DP.length; i++) {
+			for (int j = 0; j < DP[0].length; j++) {
+				System.out.print(DP[i][j] + " ");
+			}
+			System.out.println("");
+		}
+		
 		return DP[a.length()][b.length()];
 		
 	}
+	
+	public static void main (String[] args) {
+		minDistance("abcdef", "azced");
+	}
+	
 }
