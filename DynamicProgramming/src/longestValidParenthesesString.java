@@ -13,19 +13,27 @@ public class longestValidParenthesesString {
 	 
 		for(int i=0; i<=s.length()-1; i++){
 			char c = s.charAt(i);
-			if(c=='('){
+			if(c=='(') {
 				int[] a = {i,0};
 				stack.push(a);
-			}else{
+			}
+			
+			else {
+				
 				if(stack.empty()||stack.peek()[1]==1){
 					int[] a = {i,1};
 					stack.push(a);
-				}else{
+				}
+				
+				else {
 					stack.pop();
 					int currentLen=0;
+					
 					if(stack.empty()){
 						currentLen = i+1;
-					}else{
+					}
+					
+					else {
 						currentLen = i-stack.peek()[0];
 					}
 					result = Math.max(result, currentLen);
