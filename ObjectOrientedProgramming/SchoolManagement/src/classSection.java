@@ -36,7 +36,7 @@ public class classSection {
 		int totalStudents = 0;
 		
 		for (student student: listOfStudents) {
-			if (student.getScore() >=0 && student.getScore() < 55) {
+			if (student.getScore() >= 0 && student.getScore() < 55) {
 				totalStudents++;
 			}
 		}
