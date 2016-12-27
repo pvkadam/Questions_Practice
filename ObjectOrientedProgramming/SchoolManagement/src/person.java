@@ -1,5 +1,5 @@
 
-public class person {
+public abstract class person {
 
 	private int ID;
 	private String fullName;
