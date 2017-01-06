@@ -32,7 +32,7 @@ public enum planet {
 	public static void main (String[] args) {
 		
 		double earthWeight = 175;
-		double earthMass = earthWeight/EARTH.getSurfaceGravity();
+		double earthMass = earthWeight/planet.EARTH.getSurfaceGravity();
 		
 		for (planet planet: planet.values()) {
 			System.out.println("Weight on " + planet + " is " + planet.getWeight(earthMass));
